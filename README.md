@@ -1,11 +1,45 @@
-## My Project
+# QUORUM: QUality-Optimized Routing Using Multiple annotators
 
-TODO: Fill this README out!
+In order to run the code (tested on `Python 3.11.14`):
 
-Be sure to:
+```
+pip install -r requirements.txt
+```
 
-* Change the title in this README
-* Edit your repository description on GitHub
+Then, to start a single experiment:
+
+```
+python3 main.py --dataset NAME_OF_THE_DATASET --eval_type EVAL_TYPE --budget BUDGET --annotator_cost ANNOTATOR_COST --methods METHODS
+```
+
+Example:
+
+```
+python3 main.py  --dataset pubmed --eval_type dollars --backup  --budget 444 --methods QUORUM
+```
+
+To run an experiment with multiple seeds:
+```
+python3 multi.py --dataset NAME_OF_THE_DATASET --eval_type EVAL_TYPE --budget BUDGET --annotator_cost ANNOTATOR_COST --methods METHODS
+```
+
+Example:
+
+```
+python3 multi.py  --dataset pubmed --eval_type dollars --n_seeds 3 --methods QUORUM
+```
+
+Results by default are saved in the `results` folder.
+
+
+- NAME_OF_THE_DATASET could be: `pubmed`, `imdb`, `global-mmlu`, `mmlu-redux`, `xlsum`, `cnn`, `agnews`.
+- In case you are using `XLSum`, select the language using `--language` (`spanish`, `japanese`). Same for `global-mmlu` (`ja`, `es`).
+- EVAL_TYPE could be either `auditor_style` (one annotation per sample) or `dollars` (keeping into account the monetary constraint).
+- ANNOTATOR_COST is a list which represent the cost of the LLMs (i.e., 0.01 0.03 0.05 0.1).
+- METHODS could be `QUORUM, Random, SANT, CoAnnotating, PPI, Araida`.
+
+SANT and ARAIDA could have small compatibility issues with `FastText`.
+
 
 ## Acknowledgments
 
