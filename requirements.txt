@@ -1,0 +1,10 @@
+numpy==2.0.2
+nltk==3.9.2
+sentence-transformers==5.1.2
+scikit-learn==1.6.1
+datasets==4.4.1
+matplotlib==3.9.4
+fasttext-wheel
+evaluate
+rouge_score
+gdown
