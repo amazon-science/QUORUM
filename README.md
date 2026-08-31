@@ -1,5 +1,7 @@
 # QUORUM: QUality-Optimized Routing Using Multiple annotators
 
+Data annotation remains a central bottleneck in natural language processing, requiring human effort to obtain high-quality labels at scale. While Large Language Models (LLMs) offer a fast and cost-effective alternative, their reliability is highly instance-dependent: they perform well on simple inputs but often fail on examples requiring nuanced reasoning or contextual understanding. In this work, we address this challenge with QUORUM (QUality-Optimized Routing Using Multiple annotators), a budget-aware routing framework that dynamically assigns each instance to human or LLM annotators under a fixed annotation budget. Unlike prior approaches relying on model confidence or uncertainty estimates, QUORUM leverages feature-based signals to estimate instance difficulty and supports multiple annotations per instance, combining them through agreement-based rewards to improve reliability. We evaluate QUORUM across diverse closed- and open-ended annotation tasks in English and multilingual settings, and QUORUM improves annotation quality by up to 34.4% while reducing costs by 8.8% over competing methods.
+
 In order to run the code (tested on `Python 3.11.14`):
 
 ```
@@ -39,6 +41,21 @@ Results by default are saved in the `results` folder.
 - METHODS could be `QUORUM, Random, SANT, CoAnnotating, PPI, Araida`.
 
 SANT and ARAIDA could have small compatibility issues with `FastText`.
+
+## Citation
+If you use this code in your research or project, please cite us:
+```bibtex
+@misc{purificato2026quorumqualityoptimizedroutingusing,
+      title={QUORUM: QUality-Optimized Routing Using Multiple annotators}, 
+      author={Antonio Purificato and Maria Sofia Bucarelli and Andrea Bacciu and Amin Mantrach and Fabrizio Silvestri},
+      year={2026},
+      eprint={2608.27974},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2608.27974}, 
+}
+```
+For doubts or errors feel free to ping purificato@diag.uniroma1.it!
 
 
 ## Acknowledgments
