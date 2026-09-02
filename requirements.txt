@@ -1,5 +1,5 @@
 numpy==2.0.2
-nltk==3.9.2
+nltk==3.10.3
 sentence-transformers==5.1.2
 scikit-learn==1.6.1
 datasets==4.4.1
