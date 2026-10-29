@@ -45,14 +45,25 @@ SANT and ARAIDA could have small compatibility issues with `FastText`.
 ## Citation
 If you use this code in your research or project, please cite us:
 ```bibtex
-@misc{purificato2026quorumqualityoptimizedroutingusing,
-      title={QUORUM: QUality-Optimized Routing Using Multiple annotators}, 
-      author={Antonio Purificato and Maria Sofia Bucarelli and Andrea Bacciu and Amin Mantrach and Fabrizio Silvestri},
-      year={2026},
-      eprint={2608.27974},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2608.27974}, 
+@inproceedings{purificato-etal-2026-quorum,
+    title = "{QUORUM}: {QU}ality-Optimized Routing Using Multiple annotators",
+    author = "Purificato, Antonio  and
+      Bucarelli, Maria Sofia  and
+      Bacciu, Andrea  and
+      Mantrach, Amin  and
+      Silvestri, Fabrizio",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.1172/",
+    pages = "26873--26890",
+    ISBN = "979-8-89176-459-0",
 }
 ```
 For doubts or errors feel free to ping purificato@diag.uniroma1.it!
